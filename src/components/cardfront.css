@@ -1,0 +1,9 @@
+.frontcard{ 
+    width: 400px;
+    height: 220px;
+    z-index: 1;
+    position: absolute;
+    background-size: cover;
+    background-image: url('../assets/cardfront.png');
+    background-repeat: no-repeat; 
+}

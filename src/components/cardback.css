@@ -1,0 +1,23 @@
+.card {
+  width: 490px;
+  height: 273px;
+  z-index: 1;
+  position: absolute;
+  background-size: cover;
+  background-image: url('../assets/cardback.png');
+  background-repeat: no-repeat;
+  color: #fff;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 4.68px;
+}
+#cardcvc{
+    
+    margin-top: 8.2em;
+    
+    margin-left: 12.5em;
+}
+
