@@ -2,7 +2,6 @@
 * {
   padding: 0%;
   margin: 0%;
-  text-align: center;
 }
 main {
   position: relative;
@@ -21,16 +20,71 @@ main {
 }
 form {
   position: absolute;
-  background-color: aqua;
+
   top: 25vh;
-  right:15vw;
+  right: 15vw;
   color: #404040;
   font-family: Roboto;
-  font-size: 20px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
   letter-spacing: 1.86px;
+}
+input {
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.13);
+  font-size: 20px;
+  background: #fff;
+  display: flex;
+  height: 44px;
+  color: #bbb9bc;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 1.875px;
+  padding-left: 12px;
+}
+.labelin {
+  font-size: 16px;
+  margin-bottom: 3vh;
+}
+.colinput {
+  display: flex;
+  flex-direction: column;
+  width: 373px;
+}
+.rowin {
+  display: flex;
+}
+#cvclabel {
+  margin-left: 26px;
+}
+#exmonthinput {
+  width: 66px;
+}
+#exyearinput {
+  width: 66px;
+  margin-left: 15px;
+  margin-right: 22px;
+}
+#cvcinput {
+  width: 177px;
+}
+button {
+  color: #fff;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.16px;
+  border-radius: 6px;
+  background: #220930;
+  width: 385px;
+  height: 53px;
+  margin-top: 5vh;
 }
 .cardfront {
   position: absolute;
