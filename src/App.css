@@ -99,6 +99,10 @@ button {
   margin-top: 10vh;
   margin-left: 12vw;
 }
+.redalert{
+  color: red;
+  font-size: 12px;
+}
 .cardback {
   position: absolute;
   top: 0;
