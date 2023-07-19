@@ -72,6 +72,14 @@ input {
 #cvcinput {
   width: 177px;
 }
+.imgsuccess{
+  height: 50vh;
+  width: 50vh;
+}
+#cvcalert{
+  position: absolute;
+  right:0em;
+}
 button {
   color: #fff;
   font-family: Inter;
