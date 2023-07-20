@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
 import './App.css';
 import Cardfront from './components/cardfront';
 import Cardback from './components/cardback';
@@ -16,31 +15,32 @@ function App() {
 
   function dataHandle(e) {
     e.preventDefault();
-    if (isValid.name && isValid.nu && isValid.month && isValid.year) {  
+    if (isValid.name && isValid.nu && isValid.month && isValid.year) {
       setName(initialState.n);
       setCardNumber(initialState.cn);
       setExpMonth(initialState.em);
       setExpYear(initialState.ey);
       setCvc(initialState.cv);
-      
-    }
-    else {
-
-      alert("Invalid data");
+    } else {
+      alert('Invalid data');
     }
   }
 
   function validation1() {
     if (!initialState.n) {
       setErrors({ ...formErrors, name: 'Please fill this field' });
-      isValid.name = false;
+      setisValid({ ...isValid, name: false });
     } else if (initialState.n) {
       isValid.name = true;
       setErrors({ ...formErrors, name: '' });
     }
   }
   function validation2() {
-    if (!initialState.cn || !(initialState.cn.length === 16) || !/^\d+$/.test(initialState.cn)) {
+    if (
+      !initialState.cn ||
+      !(initialState.cn.length === 16) ||
+      !/^\d+$/.test(initialState.cn)
+    ) {
       setErrors({ ...formErrors, nu: 'Please fill the valid numbers' });
       isValid.nu = false;
     } else {
@@ -49,18 +49,32 @@ function App() {
     }
   }
   function validation3() {
-    if (!initialState.em  || !/^\d+$/.test(initialState.em) || !(initialState.em.length === 2)|| !(initialState.em<=12) ) {
-      setErrors({ ...formErrors, expdate: 'Please fill the valid Expire date' });
+    if (
+      !initialState.em ||
+      !/^\d+$/.test(initialState.em) ||
+      !(initialState.em.length === 2) ||
+      !(initialState.em <= 12)
+    ) {
+      setErrors({
+        ...formErrors,
+        expdate: 'Please fill the valid Expire date',
+      });
       isValid.month = false;
     } else {
       isValid.month = true;
       setErrors({ ...formErrors, expdate: '' });
     }
-    
   }
   function validation4() {
-    if (!initialState.ey || !(/^\d+$/.test(initialState.ey)) ||!(initialState.ey.length === 2)) {
-      setErrors({ ...formErrors, expdate: 'Please fill the valid Expire date' });
+    if (
+      !initialState.ey ||
+      !/^\d+$/.test(initialState.ey) ||
+      !(initialState.ey.length === 2)
+    ) {
+      setErrors({
+        ...formErrors,
+        expdate: 'Please fill the valid Expire date',
+      });
       isValid.year = false;
     } else {
       isValid.year = true;
@@ -68,7 +82,11 @@ function App() {
     }
   }
   function validation5() {
-    if (!initialState.cv || !(/^\d+$/.test(initialState.ey)) || !(initialState.cv.length === 3)) {
+    if (
+      !initialState.cv ||
+      !/^\d+$/.test(initialState.ey) ||
+      !(initialState.cv.length === 3)
+    ) {
       setErrors({ ...formErrors, cvc: 'Please fill this field' });
       isValid.year = false;
     } else {
@@ -85,7 +103,7 @@ function App() {
       <div className="home">
         <div className="leftsection"></div>
         <div className="rightsection">
-          <form id='forms'>
+          <form id="forms">
             <label className="labelin">CARDHOLDER NAME</label>
             <br />
             <br />
@@ -165,11 +183,13 @@ function App() {
             </div>
             <div className="rowin">
               <p className="redalert"> {formErrors.expdate}</p>
-              <p className="redalert" id='cvcalert'> {formErrors.cvc}</p>
+              <p className="redalert" id="cvcalert">
+                {' '}
+                {formErrors.cvc}
+              </p>
             </div>
             <button onClick={dataHandle}>Confirm</button>
           </form>
-          
         </div>
         <div className="cardfront">
           <Cardfront
