@@ -11,6 +11,7 @@ main {
   background-color: blueviolet;
   height: 100vh;
   z-index: -1;
+  background-image: url('./assets/leftbg.png');
 }
 .rightsecton {
   z-index: -1;
